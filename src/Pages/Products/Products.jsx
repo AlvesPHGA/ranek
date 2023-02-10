@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrap } from '../../style/Styles.style';
+import { FlexWrap, Wrap } from '../../style/Styles.style';
 import Card from './component/Card';
 import { ProductStyle } from './Products.style';
 
@@ -10,11 +10,11 @@ const Products = ({ datas }) => {
          <Wrap>
             <h1>Produtos</h1>
 
-            <section>
+            <FlexWrap>
                {datas.map(({ id, nome, fotos }) => (
                   <Card key={id} name={nome} photo={fotos} />
                ))}
-            </section>
+            </FlexWrap>
          </Wrap>
       </ProductStyle>
    );

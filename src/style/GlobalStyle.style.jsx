@@ -15,4 +15,10 @@ export const GlobalStyle = createGlobalStyle`
    img{
       max-width: 100%;
    }
+
+   h1 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+   }
 `;
