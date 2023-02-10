@@ -15,9 +15,16 @@ export const HeaderStyle = styled.header`
          padding: 0.75rem 1.25rem;
          background: #c3c3c3;
          border-radius: 0.5rem;
+         text-transform: uppercase;
+         color: black;
 
          &:hover {
             background: #cecece;
+         }
+
+         &.active {
+            color: #c3c3c3;
+            background: #000;
          }
       }
    }
