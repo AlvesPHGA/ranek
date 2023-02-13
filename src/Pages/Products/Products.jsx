@@ -1,18 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Grid, Wrap } from '../../style/Styles.style';
-import Card from './component/Card';
 import { ProductStyle } from './Products.style';
 
 const Products = () => {
    const [products, setProducts] = React.useState(null);
+   const [error, setError] = React.useState(null);
+   const [load, setLoad] = React.useState(false);
 
    React.useEffect(() => {
-      fetch('https://ranekapi.origamid.dev/json/api/produto')
-         .then((res) => res.json())
-         .then((data) => setProducts(data));
+      async function fetchAPI(url) {
+         try {
+            setLoad(true);
+            const res = await fetch(url);
+            const data = await res.json();
+            setProducts(data);
+         } catch (er) {
+            setError('Ocorreu um erro inexperado');
+         } finally {
+            setLoad(false);
+         }
+      }
+
+      fetchAPI('https://ranekapi.origamid.dev/json/api/produto');
    }, []);
 
+   if (load) return <h1>Carregando...</h1>;
+   if (error) return <p>{error}</p>;
    if (products === null) return null;
    return (
       <ProductStyle>
