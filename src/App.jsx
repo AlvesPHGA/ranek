@@ -21,7 +21,7 @@ function App() {
          <BrowserRouter>
             <Header />
             <Routes>
-               <Route path="/" element={<Products datas={datas} />} />
+               <Route path="/*" element={<Products datas={datas} />} />
                <Route path="contact" element={<Contact />} />
             </Routes>
          </BrowserRouter>
