@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
-export const CardStyle = styled.div`
-   width: 300px;
-   cursor: pointer;
+export const CardStyle = styled.a`
+   /* width: 300px; */
+   display: block;
+   border: 1px solid red;
+   width: fit-content;
+   /* cursor: pointer; */
    border-radius: 0.5rem;
    transition: 0.5s ease;
 

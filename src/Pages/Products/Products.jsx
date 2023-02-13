@@ -1,20 +1,34 @@
 import React from 'react';
-import { FlexWrap, Wrap } from '../../style/Styles.style';
+import { Link } from 'react-router-dom';
+import { Grid, Wrap } from '../../style/Styles.style';
 import Card from './component/Card';
 import { ProductStyle } from './Products.style';
 
-const Products = ({ datas }) => {
-   // console.log(nome);
+const Products = () => {
+   const [products, setProducts] = React.useState(null);
+
+   React.useEffect(() => {
+      fetch('https://ranekapi.origamid.dev/json/api/produto')
+         .then((res) => res.json())
+         .then((data) => setProducts(data));
+   }, []);
+
+   if (products === null) return null;
    return (
       <ProductStyle>
          <Wrap>
             <h1>Produtos</h1>
 
-            <FlexWrap>
-               {datas.map(({ id, nome, fotos }) => (
-                  <Card key={id} name={nome} photo={fotos} />
+            <Grid>
+               {products.map(({ id, nome, fotos }) => (
+                  <Link to={id}>
+                     <div key={fotos[0]}>
+                        <img src={fotos[0].src} alt="" />
+                     </div>
+                     <h2>{nome}</h2>
+                  </Link>
                ))}
-            </FlexWrap>
+            </Grid>
          </Wrap>
       </ProductStyle>
    );

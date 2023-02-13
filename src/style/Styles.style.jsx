@@ -12,9 +12,9 @@ export const Wrap = styled.section`
    position: relative;
 `;
 
-export const FlexWrap = styled.section`
-   display: flex;
-   flex-wrap: wrap;
-   gap: 50px;
-   justify-content: center;
+export const Grid = styled.section`
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   justify-content: space-between;
+   gap: 2rem;
 `;
