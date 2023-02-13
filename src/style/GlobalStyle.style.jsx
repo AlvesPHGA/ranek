@@ -13,12 +13,20 @@ export const GlobalStyle = createGlobalStyle`
    }
 
    img{
-      max-width: 100%;
+      width: 100%;
    }
 
    h1 {
       font-size: 2rem;
       text-align: center;
       margin-bottom: 3rem;
+   }
+
+   ul{
+      list-style: none;
+   }
+
+   li{
+      font-size: 1.25rem;
    }
 `;
