@@ -35,7 +35,7 @@ const Products = () => {
 
             <Grid className="showContent">
                {products.map(({ id, nome, fotos }) => (
-                  <Link to={id}>
+                  <Link to={`produto/${id}`} key={id}>
                      <div key={fotos[0]}>
                         <img src={fotos[0].src} alt="" />
                      </div>
