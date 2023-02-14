@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ProductIntern = styled.section`
    padding: 1.25rem 0;
+   min-height: calc(100vh + 20vh);
 `;
 
 export const BoxImage = styled.div`

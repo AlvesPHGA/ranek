@@ -1,5 +1,12 @@
 import styled from 'styled-components';
 
+export const AppStyle = styled.section`
+   min-height: calc(100vh + 10vh);
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+`;
+
 export const Flex = styled.section`
    display: flex;
    gap: 1.75rem;
