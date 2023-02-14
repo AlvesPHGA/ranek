@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Load from '../../components/Load/Load';
 import { Grid, Wrap } from '../../style/Styles.style';
 import { ProductStyle } from './Products.style';
 
@@ -25,7 +26,7 @@ const Products = () => {
       fetchAPI('https://ranekapi.origamid.dev/json/api/produto');
    }, []);
 
-   if (load) return <h1>Carregando...</h1>;
+   if (load) return <Load />;
    if (error) return <p>{error}</p>;
    if (products === null) return null;
    return (
