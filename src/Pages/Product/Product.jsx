@@ -38,7 +38,7 @@ const Product = () => {
    if (error) return <p>{error}</p>;
    if (product === null) return null;
    return (
-      <Wrap>
+      <Wrap className="showContent">
          <ProductIntern>
             <Flex>
                <BoxImage>

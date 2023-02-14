@@ -20,7 +20,7 @@ const contactList = [
 const Contact = () => {
    return (
       <ContactStyle>
-         <Wrap>
+         <Wrap className="showContent">
             <h1>Contatos</h1>
             <Flex>
                <BoxImage>

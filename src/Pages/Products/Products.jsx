@@ -30,10 +30,10 @@ const Products = () => {
    if (products === null) return null;
    return (
       <ProductStyle>
-         <Wrap>
+         <Wrap className="showContent">
             <h1>Produtos</h1>
 
-            <Grid>
+            <Grid className="showContent">
                {products.map(({ id, nome, fotos }) => (
                   <Link to={id}>
                      <div key={fotos[0]}>

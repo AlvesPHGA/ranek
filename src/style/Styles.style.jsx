@@ -10,6 +10,17 @@ export const Wrap = styled.section`
    height: fit-content;
    margin: 0 auto;
    position: relative;
+
+   &.showContent {
+      opacity: 0;
+      animation: showContent 0.7s ease forwards;
+   }
+
+   @keyframes showContent {
+      to {
+         opacity: 1;
+      }
+   }
 `;
 
 export const Grid = styled.section`
