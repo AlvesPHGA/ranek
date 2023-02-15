@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Head from '../../components/Head/Head';
 import Load from '../../components/Load/Load';
 
 import { Flex, Wrap } from '../../style/Styles.style';
@@ -40,6 +41,7 @@ const Product = () => {
    if (product === null) return null;
    return (
       <Wrap className="showContent">
+         <Head title={id} />
          <ProductIntern>
             <Flex>
                <BoxImage>

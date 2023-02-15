@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Head from '../../components/Head/Head';
 import Load from '../../components/Load/Load';
 import { Grid, Wrap } from '../../style/Styles.style';
 import { ProductStyle } from './Products.style';
@@ -31,6 +32,7 @@ const Products = () => {
    if (products === null) return null;
    return (
       <ProductStyle>
+         <Head title="Home" />
          <Wrap className="showContent">
             <h1>Produtos</h1>
 

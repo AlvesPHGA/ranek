@@ -1,4 +1,5 @@
 import React from 'react';
+import Head from '../../components/Head/Head';
 import { Flex, Wrap } from '../../style/Styles.style';
 import { BoxContact, BoxImage, ContactStyle } from './Contact.style';
 
@@ -20,6 +21,7 @@ const contactList = [
 const Contact = () => {
    return (
       <ContactStyle>
+         <Head title="Contato" />
          <Wrap className="showContent">
             <h1>Contatos</h1>
             <Flex>
