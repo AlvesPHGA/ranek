@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const ContactStyle = styled.section`
    padding: 4rem 0;
+   height: 100vh;
 
    & h1 {
       font-size: 2rem;
